@@ -1,10 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 :root {
     --lime: rgba(0, 255, 0, 1);
+    --red: rgba(255, 0, 0, 1);
     --white: rgba(255, 255, 255, 1);
     --black: rgba(15, 15, 15, 1);
 }
@@ -89,14 +91,15 @@ div.background span:nth-child(10) {
     80% {
         opacity: 0.7;
     }
-
+    
     100% {
+        box-shadow: 0 0 3rem var(--red), 0 0 6rem var(--red), 0 0 9rem var(--red), 0 0 12rem var(--red);
         transform: translateY(-700px) rotate(360deg);
         opacity: 0;
     }
 }
 
-div.table, div.title, div.contact {
+div.table, div.title, div.contact, div.buttons {
     margin-top: 1rem;
     margin-left: 1rem;
 }
@@ -125,4 +128,64 @@ div.contact>h3 {
 
 img.small-img {
     width: 10%;
+}
+
+div.buttons {
+    border: 1px solid var(--lime);
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+}
+
+div.buttons>a {
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div.button-box, div.button-box-leverancier {
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.button-box {
+    width: 70.2%;
+}
+
+div.button-box-leverancier {
+    width: 75.5%;
+}
+
+div.section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+div.section>input {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+div.submit>input {
+    border-color: var(--lime);
+        background-color: transparent;
+        color: var(--lime);
+    padding: 1rem;
+    margin-right: 5rem;
+    cursor: pointer;
+}
+
+div.submit {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+h3.succes-text {
+    text-align: center;
+    border: 0.1rem solid var(--red);
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 50%;
 }
