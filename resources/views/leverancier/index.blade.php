@@ -45,11 +45,18 @@
                     <td>{{$info->leverancier->leverancierNummer}}</td>
                     <td>{{$info->leverancier->mobiel}}</td>
                     <td>{{$info->amount}}</td>
-                    <td></td>
+                    <td><a href="{{route('product.index', [$info->leverancier->id])}}"><img class="small-img" src="/img/box.png" alt="box.png"></a></td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
+
+        <div class="button-box-leverancier">
+            <div class="buttons">
+                <a href="{{route('home')}}">Home</a>
+            </div>
+        </div>
+
     </div>
 </body>
 
